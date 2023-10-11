@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* hides clear button in textbox for ms browser */
+.no-clear::-ms-clear {
+  display: none;
+}
+
+/* hides spinners for number input */
+input[type='number'].no-spin::-webkit-inner-spin-button,
+input[type='number'].no-spin::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'].no-spin {
+  -moz-appearance: textfield;
+}
+
+/* attempt to fix iOS text input text disappearing */
+.safari-fix {
+  transform: translate3d(0, 0, 0);
+}
